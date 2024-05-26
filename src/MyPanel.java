@@ -87,6 +87,42 @@ public class MyPanel extends JPanel {
                     segment(5);
                     segment(7);
                     break;
+                case "Д":
+                    segment(1);
+                    segment(7);
+                    segment(6);
+                    segment(4);
+                    segment(5);
+                    segment(2);
+                    segment(8);
+                    segment(9);
+                    segment(10);
+                    segment(11);
+                    break;
+                case "И":
+                    segment(2);
+                    segment(4);
+                    segment(6);
+                    segment(7);
+                    segment(13);
+                    segment(14);
+                    break;
+                case "М":
+                    segment(2);
+                    segment(4);
+                    segment(6);
+                    segment(7);
+                    segment(12);
+                    segment(13);
+                    break;
+                case "А":
+                    segment(1);
+                    segment(2);
+                    segment(3);
+                    segment(4);
+                    segment(6);
+                    segment(7);
+                    break;
             }
             x = x + step + width;
         }
@@ -106,6 +142,20 @@ public class MyPanel extends JPanel {
             case 6:outlist.add(new Rectangle(x, y+(height/2)+delta, x, y+height-delta));
                 break;
             case 7:outlist.add(new Rectangle(x, y+delta, x, y+(height/2)-delta));
+                break;
+            case 8:outlist.add(new Rectangle(x+width, y+height, x+width+delta*2,y+height));
+                break;
+            case 9:outlist.add(new Rectangle(x+width+delta*2, y+height, x+width+delta*2,y+height+delta*2));
+                break;
+            case 10:outlist.add(new Rectangle(x, y+height, x-delta*2,y+height));
+                break;
+            case 11:outlist.add(new Rectangle(x-delta*2, y+height, x-delta*2,y+height+delta*2));
+                break;
+            case 12:outlist.add(new Rectangle(x+width/2-delta, y+height/2-delta, x+delta, y+delta));
+                break;
+            case 13:outlist.add(new Rectangle(x+width/2+delta/2, y+height/2-delta, x+width-delta, y+delta));
+                break;
+            case 14:outlist.add(new Rectangle(x+delta, y+height-delta, x+width/2-delta/2, y+height/2+delta));
                 break;
         }
     }
