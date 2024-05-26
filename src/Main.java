@@ -11,9 +11,10 @@ public class Main {
         int[] koords = new int[5];
         JTextField smallField = new JTextField("300, 250, 25, 45, 20");
         JTextField numbers = new JTextField("0, 1, 2, 3, 4, 5, 6, 7, 8, 9");
+        JButton button = new JButton("Ввод");
         JFrame f = new JFrame("Swing Paint Demo");
         MyPanel myPanel = new MyPanel();
-        numbers.addActionListener(new ActionListener() {
+        ActionListener PrintLine = new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
                 String[] parm = smallField.getText().replaceAll(" ", "").split(",");
@@ -34,7 +35,9 @@ public class Main {
                 f.pack();
                 f.setVisible(true);
             }
-        });
+        };
+        numbers.addActionListener(PrintLine);
+        button.addActionListener(PrintLine);
 
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel contents = new JPanel(new FlowLayout(FlowLayout.LEFT));
@@ -42,6 +45,7 @@ public class Main {
         //Создание панели с текстовыми полями
         contents.add(numbers);
         contents.add(smallField);
+        contents.add(button);
         f.setContentPane(contents);
 
         myPanel.repaint();
